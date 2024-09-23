@@ -16,7 +16,7 @@ form {
   }
 
   .topic {
-    font-size: 35px;
+    font-size: clamp(24px, 3vw + 1rem, 35px);
     color: #333;
   }
 
@@ -28,7 +28,14 @@ form {
 
   .question-of-day,
   .color-label {
-    font-size: 25px;
+    font-size: clamp(18px, 2vw + 0.9rem, 25px);
+  }
+
+  .followup {
+    margin: 10px 0;
+    font-size: clamp(16px, 2vw + 1rem, 19px);
+    font-style: italic;
+    color: #333;
   }
 
   /*   .question-of-day,
@@ -40,12 +47,13 @@ form {
   .show-more-btn {
     padding: 10px 20px;
     border: none;
-    border-radius: 99vw;
+    border-radius: 20px;
     background-color: #87cfebb0;
     opacity: 0.8;
     color: black;
     font-size: 15px;
     transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 3px #7d8d9d, -2px -2px 3px #7d8d9d;
 
     &:hover {
       background-color: #87ceeb;
@@ -71,20 +79,14 @@ form {
     height: auto;
   }
 
-  .followup {
-    margin: 10px 0;
-    font-size: 16px;
-    color: #333;
-  }
-
-  textarea,
+  /*   textarea,
   .color-label,
   .color-input,
   .submit-btn {
     transition: opacity 0.8s ease-in-out, filter 0.8s ease-in-out;
     filter: blur(0);
     opacity: 1;
-  }
+  } */
 
   textarea {
     width: 400px;
@@ -97,7 +99,7 @@ form {
     line-height: 40px;
     padding-left: 100px;
     padding-right: 20px;
-    padding-top: 9px;
+    padding-top: 7px;
     padding-bottom: 34px;
     background-image: url(https://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png),
       url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
@@ -131,6 +133,8 @@ form {
     border: none;
     border-radius: 20px;
     background-color: #ffd1dc;
+    box-shadow: 2px 2px 3px #ba9aa1, -2px -2px 3px #ba9aa1;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
       background-color: #fd94ac;

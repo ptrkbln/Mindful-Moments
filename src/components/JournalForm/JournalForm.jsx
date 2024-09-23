@@ -27,25 +27,26 @@ export default function JournalForm() {
         <p className="topic">{questionOfDay?.topic}</p>
         <p className="question-of-day">{questionOfDay?.question}</p>
         {/* Type button so it doesnt act as submit */}
-        {timer <= 0 && (
-          <button
-            type="button"
-            className="show-more-btn"
-            onClick={() => setShowMore(!showMore)}
-          >
-            {!showMore ? "Show more" : "Show less"}
-          </button>
-        )}
-        <div className={showMore ? "followups" : "followup-hidden"}>
-          {questionOfDay?.followUps.map((question, i) => {
-            return (
-              <p key={i} className="followup">
-                {question}
-              </p>
-            );
-          })}
-        </div>
       </label>
+      {timer <= 0 && (
+        <button
+          type="button"
+          className="show-more-btn"
+          onClick={() => setShowMore(!showMore)}
+        >
+          {!showMore ? "Show more" : "Show less"}
+        </button>
+      )}
+      <div className={showMore ? "followups" : "followup-hidden"}>
+        {questionOfDay?.followUps.map((question, i) => {
+          return (
+            <p key={i} className="followup">
+              {question}
+            </p>
+          );
+        })}
+      </div>
+
       {!timer && (
         <>
           <textarea

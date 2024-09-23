@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 5vh;
-  margin-top: -5rem;
   p {
     font-size: clamp(2rem, 12vw + 2rem, 10rem);
     font-weight: 100;
@@ -15,6 +14,8 @@
     border: none;
     border-radius: 20px;
     background-color: #ffd1dc;
+    box-shadow: 2px 2px 3px #ba9aa1, -2px -2px 3px #ba9aa1;
+    margin-top: 10px;
 
     &:hover {
       background-color: #fd94ac;

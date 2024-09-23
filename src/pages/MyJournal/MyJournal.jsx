@@ -19,8 +19,6 @@ export default function MyJournal() {
   useEffect(() => {
     const entry = localStorage.getItem(currentDate);
     entry ? setCompletedToday(true) : setCompletedToday(false);
-    console.log("Checking localStorage on load:", entry); // Check the entry directly
-    console.log("Current Date:", currentDate); // Log currentDate
   }, [currentDate]);
 
   // checking if the journal for today is already complete:  daily selecting a new question from gratitudeQuestions array based on looping through each question and checking if it's saved (together with an answer) in localStorage
@@ -63,9 +61,11 @@ export default function MyJournal() {
       {!completedToday ? (
         <JournalForm />
       ) : (
-        <p>You're all done for today. Come back tomorrow 🔆</p>
+        <p className="done-for-today-p">
+          You're all done for today. Come back tomorrow 🔆
+        </p>
       )}
-      {timer > 0 && <Timer />}
+      {!completedToday && timer > 0 && <Timer />}
     </section>
   );
 }

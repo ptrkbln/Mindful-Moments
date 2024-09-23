@@ -1,4 +1,50 @@
 .my-profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   min-height: calc(100vh - 100px - 175px);
-  background: linear-gradient(to bottom, #87ceeb, white, white, #fdfd96);
+  background: linear-gradient(
+    to bottom,
+    #87ceeb,
+    #eff0eb,
+    #eff0eb,
+    #eff0eb,
+    #eff0eb,
+    #eff0eb,
+    #fdfd96
+  );
+
+  p {
+    max-width: 800px;
+    font-size: clamp(18px, 2vw + 0.9rem, 25px);
+    padding: 20px;
+  }
+
+  .emotional-tracker {
+    width: 100vw;
+    height: 100px;
+    border: 1px solid black;
+  }
+
+  img {
+    width: 100%;
+    max-height: 100px;
+    object-fit: cover;
+  }
+
+  @media all and (min-width: 768px) {
+    img {
+      max-height: 250px;
+    }
+  }
+
+  .text-wrapper {
+    min-height: calc(100vh - 100px - 175px - 250px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
