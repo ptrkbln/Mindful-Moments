@@ -1,0 +1,111 @@
+.benefits {
+  display: flex;
+  background: linear-gradient(to top, #fdfd96, white, white);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 66vh;
+
+  h2 {
+    padding-top: 5rem;
+  }
+
+  .text-wrapper {
+    max-width: 700px;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+    margin: 1.5rem 0 1.5rem 0;
+  }
+
+  .animated-headline {
+    display: none;
+  }
+  .nonanimated-headline {
+    font-size: 22px;
+    padding: 0 20px;
+    color: #333;
+    padding-top: 3rem;
+  }
+  img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: 0 70%;
+  }
+
+  @media all and (min-width: 1250px) {
+    .container {
+      width: 100vw;
+      min-height: 30vh;
+      margin: 90px auto;
+      padding: 0 20px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 35px;
+      letter-spacing: -0.05em;
+      text-align: center;
+      line-height: 1;
+      color: #013a52;
+      transform-origin: center bottom;
+      transition: all 1s ease-in-out;
+    }
+
+    .animated-headline {
+      transform-origin: center top;
+      padding: 2.5rem;
+      display: block;
+    }
+
+    .nonanimated-headline {
+      display: none;
+    }
+
+    .container:hover h3 {
+      transform: scale(0);
+    }
+
+    .text {
+      position: absolute;
+      right: 0;
+      left: 0;
+      transform: translateY(0%);
+      transition: all 1s ease-in-out;
+    }
+
+    .text:hover {
+      background-color: inherit;
+    }
+
+    .text:hover:before,
+    .text:hover:after {
+      margin: 0;
+    }
+
+    .inner {
+      padding: 0 60px;
+      max-height: 0;
+      background: inherit;
+      line-height: 1.5;
+      font-size: 18px;
+      transform: scale(0);
+      transition: all 1s ease-in-out;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .container:hover .inner {
+      padding: 60px;
+      max-height: 300px;
+      transform: scale(1.05);
+    }
+  }
+}

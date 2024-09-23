@@ -1,0 +1,4 @@
+.my-profile-section {
+  min-height: calc(100vh - 100px - 175px);
+  background: linear-gradient(to bottom, #87ceeb, white, white, #fdfd96);
+}

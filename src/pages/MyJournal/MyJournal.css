@@ -1,0 +1,10 @@
+.my-journal-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: calc(100vh - 100px - 175px);
+  background: linear-gradient(to bottom, #87ceeb, white, white, #fdfd96);
+  padding: 5rem 20px;
+}

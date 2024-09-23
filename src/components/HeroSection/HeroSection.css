@@ -1,0 +1,80 @@
+.hero {
+  height: 90vh;
+  position: relative;
+  background: linear-gradient(to bottom, #87ceeb, #f0f9ff);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+  padding: 0 20px;
+
+  h1,
+  h2 {
+    z-index: 1;
+  }
+
+  .cloud {
+    position: absolute;
+    width: 350px;
+    animation: moveClouds 100s linear infinite;
+  }
+
+  @media screen and (max-width: 700px) {
+    .cloud {
+      width: 150px;
+      /* IMPORTANT  */
+    }
+  }
+
+  .cloud-1 {
+    left: -300px;
+    top: 5%;
+  }
+
+  .cloud-2 {
+    left: -400px;
+    top: 12%;
+    animation-delay: 20s;
+  }
+
+  .cloud-3 {
+    left: -500px;
+    top: 20%;
+    animation-delay: 40s;
+  }
+
+  .cloud-4 {
+    bottom: 5%;
+    left: -500px;
+    animation-delay: 30s;
+  }
+
+  .cloud-5 {
+    bottom: 20%;
+    left: -500px;
+  }
+
+  .cta-button {
+    z-index: 1;
+    padding: 20px 15px;
+    border: none;
+    background-color: #db7093;
+    color: #f0f9ff;
+    font-weight: bold;
+    border-radius: 99vw;
+    position: absolute;
+    bottom: 15%;
+    box-shadow: 1px 1px 3px #7d8d9d, -1px -1px 3px #7d8d9d;
+  }
+}
+
+@keyframes moveClouds {
+  0% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateX(200vw);
+  }
+}

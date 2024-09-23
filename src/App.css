@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+}
+
+h1,
+h2 {
+  text-align: center;
+
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Kaushan Script", cursive;
+  color: #db7093;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #708090;
+}
+
+h2 {
+  font-size: 1.9rem;
+  color: #708090;
+  word-spacing: 10px;
+  text-shadow: 1px 1px 1px #c8a2c8;
+  margin-bottom: 5vh;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a,
+i {
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  color: inherit;
+
+  &:hover {
+    color: #db7093;
+  }
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}

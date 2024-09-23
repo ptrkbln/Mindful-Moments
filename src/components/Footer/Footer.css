@@ -1,0 +1,31 @@
+footer {
+  width: 100%;
+  background-color: #fdfd96;
+  height: 175px;
+}
+
+.footer-flex-wrapper {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem 2rem;
+
+  .social-media-wrapper {
+    text-align: center;
+
+    a {
+      color: inherit;
+
+      i {
+        padding: 0.7rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+.copyright {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  text-align: center;
+}
