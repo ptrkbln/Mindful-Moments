@@ -1,6 +1,6 @@
 import "./App.css";
 import LandingPage from "./pages/LandingPage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import MyJournal from "./pages/MyJournal/MyJournal";
 import MyProfile from "./pages/MyProfile/MyProfile";
 import PageNotFound from "./pages/404";
@@ -17,8 +17,8 @@ function App() {
               <Route index element={<LandingPage />} />
               <Route path="journal" element={<MyJournal />} />
               <Route path="profile" element={<MyProfile />} />
-              <Route path="*" element={<PageNotFound />} replace />
             </Route>
+            <Route path="*" element={<Navigate to="/" />} replace />
           </Routes>
         </JournalContextProvider>
       </BrowserRouter>

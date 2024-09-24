@@ -23,7 +23,7 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(1.7em, 2vw + 1.5rem, 3.1rem);
+  font-size: clamp(1.5rem, 2vw + 1.5rem, 3.1rem);
   font-family: "Kaushan Script", cursive;
   color: #db7093;
   font-weight: bold;
@@ -47,10 +47,6 @@ i {
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   color: inherit;
-
-  &:hover {
-    color: #e998b3;
-  }
 }
 
 button {

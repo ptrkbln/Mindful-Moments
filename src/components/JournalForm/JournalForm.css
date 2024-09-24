@@ -33,17 +33,10 @@ form {
   }
 
   .followup {
-    margin: 10px 0;
     font-size: clamp(16px, 2vw + 1rem, 19px);
     font-style: italic;
-    color: #333;
+    padding-bottom: 5px;
   }
-
-  /*   .question-of-day,
-  .color-label {
-    padding: 30px;
-    font-size: 20px;
-  } */
 
   .show-more-btn {
     padding: 10px 20px;
@@ -79,15 +72,6 @@ form {
     filter: blur(0);
     height: auto;
   }
-
-  /*   textarea,
-  .color-label,
-  .color-input,
-  .submit-btn {
-    transition: opacity 0.8s ease-in-out, filter 0.8s ease-in-out;
-    filter: blur(0);
-    opacity: 1;
-  } */
 
   textarea {
     width: 400px;
@@ -129,11 +113,10 @@ form {
   }
 
   .submit-btn {
-    padding: 10px 20px;
+    padding: 20px 20px;
     font-size: clamp(0.8rem, 1rem, 1.1rem);
     border: none;
     border-radius: 20px;
-    background-color: #ffd1dc;
     box-shadow: 2px 2px 3px #ba9aa1, -2px -2px 3px #ba9aa1;
     transition: all 0.3s ease-in-out;
 

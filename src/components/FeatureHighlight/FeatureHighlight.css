@@ -1,9 +1,10 @@
 .feature-highlight {
-  min-height: 66vh;
+  min-height: 100vh;
   padding: 7rem 20px;
   background: linear-gradient(to top, #d0ffd0, #f0f9ff);
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
 }

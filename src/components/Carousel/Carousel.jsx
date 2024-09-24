@@ -31,7 +31,7 @@ export default function Carousel({ items }) {
                 className="carousel-image"
               />
             </div>
-            <p>{item.title}</p>
+            <p className="carousel-item-description">{item.title}</p>
           </div>
         ))}
       </div>

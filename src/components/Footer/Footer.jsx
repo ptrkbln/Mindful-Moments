@@ -13,7 +13,7 @@ export default function Footer() {
             <a href="#">Contact</a>
           </li>
           <li>
-            <a href="#">Terms & Conditions</a>
+            <a href="#">T & C</a>
           </li>
           <li>
             <a href="#">Privacy Policy</a>

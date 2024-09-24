@@ -1,21 +1,15 @@
 .carousel {
   position: relative;
-  max-width: 745px;
+  max-width: 600px;
   overflow: hidden; /* Prevent overflow of items */
   transition: all 0.3s ease-in-out;
   opacity: 0.8;
 }
 
 .carousel:hover {
-  transform: scale(1.1);
+  transform: scale(1.075);
   opacity: 1;
   /* IMPORTANT Not appropriate for mobile phones */
-}
-
-p {
-  padding: 20px;
-  text-align: center;
-  font-size: clamp(16px, 2vw + 0.5rem, 22px);
 }
 
 .carousel-content {
@@ -50,4 +44,11 @@ p {
   max-height: 100%; /* Prevents images from exceeding container height */
   border-radius: 30px;
   border: 5px solid rgba(231, 255, 47, 0.196);
+}
+
+.carousel-item-description {
+  padding: 20px;
+  text-align: center;
+  font-size: clamp(16px, 2vw + 0.5rem, 22px);
+  font-style: italic;
 }

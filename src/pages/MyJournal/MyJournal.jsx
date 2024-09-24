@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { gratitudeQuestions } from "../../data/gratitudeQuestions";
 import Timer from "../../components/Timer/Timer";
 import { JournalContext } from "../../contexts/JournalContext";
@@ -16,7 +16,15 @@ export default function MyJournal() {
     timer,
   } = useContext(JournalContext);
 
-  // initializing music as an object
+  // at load scroll to section (so that header not visible)
+  const targetRef = useRef(null);
+
+  useEffect(() => {
+    if (targetRef.current) {
+      targetRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+
   // initializing music as an object
   const [audio] = useState(new Audio(backgroundMusic));
   const [isPlaying, setIsPlaying] = useState(false);
@@ -37,35 +45,43 @@ export default function MyJournal() {
 
   // function to gradually decrease volume (ease-out effect)
   function fadeOut() {
-    let volumeStep = 0.01;
+    const fadeOutDuration = 10000;
+    const volumeStep = 0.01;
+    const fadeOutIntervalTime = fadeOutDuration / (0.2 / volumeStep);
+
     let fadeOutInterval = setInterval(() => {
       if (audio.volume > 0) {
-        audio.volume -= volumeStep;
+        audio.volume = Math.max(0, audio.volume - volumeStep);
       } else {
-        audio.volume = 0;
         audio.pause();
-        clearInterval(fadeOutInterval); // clear the interval once the volume hits 0
+        clearInterval(fadeOutInterval);
         setIsPlaying(false);
       }
-    }, 100);
+    }, fadeOutIntervalTime);
   }
 
   // playing music based on timer
   useEffect(() => {
-    if (timer > 2 && timer < 120 && !isPlaying && audio.paused) {
+    if (timer > 5 && timer < 120 && !isPlaying && audio.paused) {
       audio.play();
       audio.loop = true;
       fadeIn(); // start fade-in when the timer starts
       setIsPlaying(true); // playing state set to true to prevent repeated play
-    }
-    if (timer < 2 && isPlaying) {
+    } else if (timer <= 5 && isPlaying) {
       fadeOut(); // start fade-out when the timer reaches 0
     }
-
-    return () => {
-      if (timer === 0 && isPlaying) fadeOut(); // cleanup to pause music when component unmounts/timer stops or resets
-    };
+    // cleanup to pause music when component unmounts/timer stops or resets
   }, [timer]);
+
+  useEffect(() => {
+    return () => {
+      if (!audio.paused) {
+        audio.pause();
+        audio.currentTime = 0;
+        setIsPlaying(false);
+      }
+    };
+  }, [audio]);
 
   // if there is a saved item in localStorage with today's date, then the form stays closed; if not, it opens
   useEffect(() => {
@@ -109,7 +125,7 @@ export default function MyJournal() {
   }, []);
 
   return (
-    <section className="my-journal-wrapper">
+    <section className="my-journal-wrapper" ref={targetRef}>
       {!completedToday ? (
         <JournalForm />
       ) : (
