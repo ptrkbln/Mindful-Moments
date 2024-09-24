@@ -11,7 +11,7 @@ export default function Carousel({ items }) {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide(); // Move to the next slide automatically
-    }, 6000); // Change slide every 3 seconds
+    }, 8000); // Change slide every 3 seconds
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, [items.length]);
@@ -31,7 +31,7 @@ export default function Carousel({ items }) {
                 className="carousel-image"
               />
             </div>
-            <h3>{item.title}</h3>
+            <p>{item.title}</p>
           </div>
         ))}
       </div>

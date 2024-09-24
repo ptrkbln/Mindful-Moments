@@ -8,15 +8,15 @@ import Carousel from "../Carousel/Carousel";
 export default function FeatureHighlight() {
   const items = [
     {
-      title: "Item 1",
+      title: "1. Receive daily Gratitude Topics",
       image: ScreenOne,
     },
     {
-      title: "Item 2",
+      title: "2. Reflect and share your thoughts",
       image: ScreenTwo,
     },
     {
-      title: "Item 3",
+      title: "3. Follow your progress",
       image: ScreenThree,
     },
   ];

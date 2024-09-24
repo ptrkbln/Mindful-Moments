@@ -23,18 +23,18 @@ h2 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: clamp(1.7em, 2vw + 1.5rem, 3.1rem);
   font-family: "Kaushan Script", cursive;
   color: #db7093;
   font-weight: bold;
-  text-shadow: 1px 1px 2px #708090;
+  text-shadow: 2px 2px 3px #708090;
 }
 
 h2 {
-  font-size: 1.9rem;
+  font-size: clamp(1.2rem, 1.5vw + 1rem, 1.9rem);
   color: #708090;
   word-spacing: 10px;
-  text-shadow: 1px 1px 1px #c8a2c8;
+  text-shadow: 2px 2px 2px #c8a2c8;
   margin-bottom: 5vh;
 }
 
@@ -49,7 +49,7 @@ i {
   color: inherit;
 
   &:hover {
-    color: #db7093;
+    color: #e998b3;
   }
 }
 

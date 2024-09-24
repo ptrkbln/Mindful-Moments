@@ -22,13 +22,13 @@ export default function Footer() {
         <div className="social-media-wrapper">
           <h3>Follow us on</h3>
           <a href="#">
-            <i class="fa-brands fa-facebook fa-xl"></i>
+            <i className="fa-brands fa-facebook fa-xl"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-instagram fa-xl"></i>
+            <i className="fa-brands fa-instagram fa-xl"></i>
           </a>
           <a href="">
-            <i class="fa-brands fa-x-twitter fa-xl"></i>
+            <i className="fa-brands fa-x-twitter fa-xl"></i>
           </a>
         </div>
       </div>

@@ -30,7 +30,7 @@ export default function MyJournal() {
         // volume up to 0.2
         audio.volume += volumeStep;
       } else {
-        clearInterval(fadeInInterval); // stop increasing volume when it reaches 0.5
+        clearInterval(fadeInInterval); // stop increasing volume when it reaches 0.2
       }
     }, 100); // volume increase every 0.1 sec
   }
@@ -44,7 +44,7 @@ export default function MyJournal() {
       } else {
         audio.volume = 0;
         audio.pause();
-        clearInterval(fadeOutInterval); // clear the interval once hte volume is 0
+        clearInterval(fadeOutInterval); // clear the interval once the volume hits 0
         setIsPlaying(false);
       }
     }, 100);
