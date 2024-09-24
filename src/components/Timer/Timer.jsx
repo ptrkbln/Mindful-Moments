@@ -47,9 +47,15 @@ export default function Timer() {
   return (
     <div className="timer-wrapper">
       {timer > 0 && (
-        <p>
-          {minutes}:{seconds < 10 ? `0${seconds}` : seconds}{" "}
-        </p>
+        <>
+          <p className="suggestion-while-timer">
+            While the music is playing, try closing your eyes and reflecting on
+            the question.
+          </p>
+          <p>
+            {minutes}:{seconds < 10 ? `0${seconds}` : seconds}{" "}
+          </p>
+        </>
       )}
 
       {timer >= 120 && (

@@ -1,0 +1,37 @@
+.carousel {
+  position: relative;
+  max-width: 745px;
+  overflow: hidden; /* Prevent overflow of items */
+}
+
+.carousel-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.carousel-item {
+  min-width: 100%; /* Each item takes the full width */
+  display: flex; /* Flexbox for centering text */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  flex-direction: column; /* Stack image and title vertically */
+}
+
+/* Add this rule to ensure images have a maximum size but are responsive */
+.carousel-image-container {
+  max-width: 745px; /* Set the maximum width to 745px */
+
+  width: 100%; /* Makes the container responsive */
+  height: auto; /* Allows height to adjust automatically */
+  overflow: hidden; /* Prevents overflow of images */
+  display: flex; /* Flexbox to center images */
+  justify-content: center; /* Center images horizontally */
+  align-items: center; /* Center images vertically */
+}
+
+/* Adjust the image rules */
+.carousel-item img {
+  width: 100%; /* Set image width to 100% of the container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 100%; /* Prevents images from exceeding container height */
+}

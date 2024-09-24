@@ -9,6 +9,7 @@ form {
   justify-content: center;
   text-align: center;
   padding: 0 20px;
+  margin-top: -2rem;
 
   p {
     max-width: 900px;

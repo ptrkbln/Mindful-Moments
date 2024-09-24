@@ -36,25 +36,30 @@ export default function MyProfile() {
   return (
     <section className="my-profile-section">
       <div className="text-wrapper">
-        <h2>Your Achievements</h2>
+        <h2>Your Progress</h2>
         <p>
-          Days cultivating mindfulness through your journal: {daysOfPractice}
+          Days cultivating mindfulness through your journal:
+          <br /> {daysOfPractice}
         </p>
 
-        <div
-          className="emotional-tracker"
-          style={{
-            background: `linear-gradient(to right, ${emotionsTracker.join(
-              ", "
-            )})`,
-          }}
-        ></div>
-        <p>
-          An abstract visualization of your emotional journey.
-          <br />
-          Each day is represented by a color, which you previously selected to
-          represent your mood.
-        </p>
+        {daysOfPractice > 0 && (
+          <>
+            <p>An abstract visualization of your emotional journey.</p>
+            <div
+              className="emotional-tracker"
+              style={{
+                background: `linear-gradient(to right, ${emotionsTracker.join(
+                  ", "
+                )})`,
+              }}
+            ></div>
+
+            <p className="explain-emotional-tracker">
+              Each day is represented by a color you previously selected to
+              represent your mood.
+            </p>
+          </>
+        )}
       </div>
       <img src={ThankYouBanner} alt="Thank you Banner" />
     </section>

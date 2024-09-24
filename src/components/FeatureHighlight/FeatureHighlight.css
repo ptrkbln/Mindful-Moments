@@ -1,13 +1,9 @@
 .feature-highlight {
-  height: 66vh;
+  min-height: 66vh;
   padding: 2em;
   background: linear-gradient(to top, #d0ffd0, #f0f9ff);
-}
-
-.cards-wrapper {
+  width: 100vw;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 100%;
 }

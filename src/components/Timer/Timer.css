@@ -3,9 +3,19 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 5vh;
+
   p {
     font-size: clamp(2rem, 12vw + 2rem, 10rem);
     font-weight: 100;
+  }
+
+  .suggestion-while-timer {
+    font-size: clamp(16px, 2vw + 1rem, 20px);
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out, filter 0.8s ease-in-out;
+    filter: blur(0);
+    text-align: center;
+    margin-top: -1rem;
   }
 
   button {
