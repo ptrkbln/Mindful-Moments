@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-between;
   min-height: calc(100vh - 100px - 175px);
+  padding-top: 5rem;
   background: linear-gradient(
     to bottom,
     #87ceeb,
