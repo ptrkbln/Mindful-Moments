@@ -62,12 +62,12 @@ export default function MyJournal() {
 
   // playing music based on timer
   useEffect(() => {
-    if (timer > 5 && timer < 120 && !isPlaying && audio.paused) {
+    if (timer > 2 && timer < 120 && !isPlaying && audio.paused) {
       audio.play();
       audio.loop = true;
       fadeIn(); // start fade-in when the timer starts
       setIsPlaying(true); // playing state set to true to prevent repeated play
-    } else if (timer <= 5 && isPlaying) {
+    } else if (timer <= 2 && isPlaying) {
       fadeOut(); // start fade-out when the timer reaches 0
     }
     // cleanup to pause music when component unmounts/timer stops or resets
