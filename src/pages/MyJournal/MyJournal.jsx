@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { gratitudeQuestions } from "../../data/gratitudeQuestions";
 import Timer from "../../components/Timer/Timer";
 import { JournalContext } from "../../contexts/JournalContext";
@@ -15,15 +15,6 @@ export default function MyJournal() {
     setQuestionOfDay,
     timer,
   } = useContext(JournalContext);
-
-  // at load scroll to section (so that header not visible)
-  const targetRef = useRef(null);
-
-  useEffect(() => {
-    if (targetRef.current) {
-      targetRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  });
 
   // initializing music as an object
   const [audio] = useState(new Audio(backgroundMusic));
@@ -125,7 +116,7 @@ export default function MyJournal() {
   }, []);
 
   return (
-    <section className="my-journal-wrapper" ref={targetRef}>
+    <section className="my-journal-wrapper">
       {!completedToday ? (
         <JournalForm />
       ) : (
