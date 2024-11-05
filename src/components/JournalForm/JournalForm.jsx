@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect, useRef } from "react";
+import { useContext, useState, useEffect } from "react";
 import { JournalContext } from "../../contexts/JournalContext";
 import "./JournalForm.css";
 
@@ -15,15 +15,6 @@ export default function JournalForm() {
     timer,
   } = useContext(JournalContext);
 
-  // at load scroll to section (so that header not visible)
-  const targetRef = useRef(null);
-
-  useEffect(() => {
-    if (targetRef.current) {
-      targetRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-
   return (
     <form
       onSubmit={(e) => {
@@ -33,9 +24,7 @@ export default function JournalForm() {
     >
       <label>
         {/* Optional chaining (?.) in the JournalForm component ensures that even if questionOfDay is undefined for some reason, it won't throw an error when rendering. */}
-        <p className="topic" ref={targetRef}>
-          {questionOfDay?.topic}
-        </p>
+        <p className="topic">{questionOfDay?.topic}</p>
         <p className="question-of-day">{questionOfDay?.question}</p>
         {/* Type button so it doesnt act as submit */}
       </label>
