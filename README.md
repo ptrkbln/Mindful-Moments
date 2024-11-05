@@ -10,4 +10,4 @@ For my third and latest project, I crafted a **Gratitude Journal App DEMO** usin
 
 ✨ Experience the journey of gratitude and mindfulness!
 
-[Check out the deployed website here](https://mindful-moments-woad.vercel.app/journal) 
+[Check out the deployed website here](https://mindful-moments-woad.vercel.app) 
