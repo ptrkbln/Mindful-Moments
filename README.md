@@ -8,6 +8,4 @@ For my third and latest project, I crafted a **Gratitude Journal App DEMO** usin
 - **📖 Journal Entry:** After the timer lapses, a journal entry opens for you to respond to the daily questions.
 - **📊 Progress Tracking:** Monitor your growth and reflections in the profile section.
 
-✨ Experience the journey of gratitude and mindfulness!
-
-[Check out the deployed website here](https://mindful-moments-woad.vercel.app) 
+[Check out the deployed website here](https://mindful-moments-woad.vercel.app). 
